@@ -4,5 +4,6 @@ export const types = {
     urlapi: 'http://localhost:8080/api/',
     urlfiles: 'http://localhost:8080/uploads/',
 
-    rolUsuario: '[auth] UsuariRegistrado'
+    rolUsuario: '[auth] UsuarioRegistrado',
+    rolInvitado: '[auth] UsuariSinRegistrado'
 }

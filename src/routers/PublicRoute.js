@@ -1,22 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {Route, Redirect} from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { Route, Redirect } from 'react-router-dom';
+
 
 export const PublicRoute = ({
-    isAutenticated,
+    isAuthenticated,
     component: Component,
     ...rest
 }) => {
-  return (
-    <Route {...rest}
-    component={(props)=>(
-        (!isAutenticated)?(<Component{...props}/>):(<Redirect to="/home"/>)
-    )}
-    />
-  )
+
+    return (
+        <Route { ...rest }
+            component={ (props) => (
+                ( !isAuthenticated ) ? ( <Component { ...props } /> ) : ( <Redirect to="/home" /> )
+            )}
+        
+        />
+    )
 }
 
- PublicRoute.prototype={
-     isAutenticated: PropTypes.bool.isRequired,
-     component: PropTypes.func.isRequired
- }
+PublicRoute.propTypes = {
+    isAuthenticated: PropTypes.bool.isRequired,
+    component: PropTypes.func.isRequired
+}

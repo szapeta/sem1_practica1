@@ -15,16 +15,16 @@ export const AppRouter = () => {
     <Router>
       <div>
         <Switch>
-          <PrivateRoute
-            path="/user"
-            component={DashboardPrivado}
-            isAutenticated={user.logged}
+          <PublicRoute
+            path="/home"
+            component={DashboardPublic}
+            isAuthenticated={user.logged}
           />
 
-          <PublicRoute
+          <PrivateRoute
             path="/"
-            component={DashboardPublic}
-            isAutenticated={user.logged}
+            component={DashboardPrivado}
+            isAuthenticated={user.logged}
           />
         </Switch>
       </div>
