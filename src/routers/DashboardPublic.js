@@ -11,10 +11,10 @@ export const DashboardPublic = () => {
     <Navbar/>
       <div className='container mt-2'>
       <Switch>
-        <Route exact path="/home" component={Home} />
         <Route exact path="/home/login" component={Login} />
         <Route exact path="/home/new" component={Registro} />
         <Route exact path="/home" component={Home} />
+        <Redirect to="/home" />
       </Switch>
       </div>
       <Footer/>

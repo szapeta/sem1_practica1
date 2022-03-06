@@ -7,7 +7,7 @@ export const authReducer = (state = {}, action) => {
                 ...action.payload,
                 rol: types.rolUsuario,
                 logged: true,
-                url: '/usuario'
+                url: '/homeuser'
             }
 
         case types.logout:

@@ -34,7 +34,7 @@ export const Login = ({history}) => {
       <hr />
       <form autoComplete="off">
         <div className="form-group">
-          <label for="name">Username</label>
+          <label>Username</label>
           <input
             type="ingrese su nombre de usuario"
             autoComplete="off"
@@ -46,7 +46,7 @@ export const Login = ({history}) => {
           />
         </div>
         <div className="form-group">
-          <label for="pass">Password</label>
+          <label>Password</label>
           <input
             type="password"
             className="form-control"
